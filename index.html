@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href = "style.css" rel = "stylesheet">
+  <title>Calculator App</title>
+</head>
+<body class>
+  <div class="app">
+    <header>
+      <div class = "title">calc</div>
+      <div class="theme">
+        <div class="number">
+          <span class = "themeSelected">1</span>
+          <span class = "themeSelected">2</span>
+          <span class = "themeSelected">3</span>
+        </div>
+        <div class = "select-theme">
+          <span class = "theme-number">THEME </span>
+          <input type="range" min="1" max="3" step = "1" value="1" class="slider" id="range">
+        </div>
+      </div>
+    </header>
+    <div class="calc">
+      <div class="screen">0</div>
+      <div class="keyboard">
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key del">DEL</div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">+</div>
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key sub">-</div>
+        <div class="key">.</div>
+        <div class="key">0</div>
+        <div class="key">/</div>
+        <div class="key">*</div>
+        <div class="key reset">RESET</div>
+        <div class="key equal">=</div>
+      </div>
+    </div>
+  </div>
+  <script src = "app.js"></script>
+</body>
+</html>

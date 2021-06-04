@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #3b4664;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.app {
+  width: 50rem;
+}
+header {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  .theme {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .number {
+    text-align: right;
+    margin-bottom: 0.5rem;
+    span {
+      cursor: pointer;
+    }
+    span + span {
+      margin-left: 0.8rem;
+    }
+  }
+  .title {
+    flex-grow: 1;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+  }
+  .select-theme {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+  }
+  .slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 4.5rem;
+        height: 2rem;
+        outline: none;
+        border-radius: 1rem;
+        background-color: #252d44;
+        padding: 0.3rem;
+      }
+  
+  /*Tay cầm*/
+  .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #d13f30;
+        background-position: center;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  
+}
+
+//theme normal
+.calc {
+  .screen {
+    height: 10rem;
+    width: 100%;
+    background-color: #181f32;
+    border-radius: 1rem;
+    line-height: 8rem;
+    vertical-align: middle;
+    text-align: right;
+    font-weight: bold;
+    font-size: 5rem;
+    padding: 1rem 2rem;
+  }
+  .keyboard {
+    color: #3a4151;
+    margin-top: 2rem;
+    background-color: #252d44;
+    border-radius: 1rem;
+    padding: 2rem calc((100% - 4 * 9rem - 3 * 2rem) / 2);
+    display: grid;
+    grid-template-columns: repeat(4, 9rem);
+    gap: 2rem;
+    .key {
+      background-color: #eae3db;
+      border-radius: 1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 2px rgba(255, 255, 255, 0.568);
+      height: 6rem;
+      padding: 0.5rem 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 5.2rem;
+      vertical-align: middle;
+    }
+    .reset, .del {
+      color: white;
+      background-color: #647299;
+      box-shadow: 0 5px 2px #64729998;
+    }
+    .equal {
+      color: white;
+      background-color: #d13f30;
+      box-shadow: 0 5px 2px #d140309c;
+    }
+    .reset {
+      grid-area: 5/1/6/3;
+    }
+    .equal {
+      grid-area: 5/3/6/5;
+    }
+    .slider::-webkit-slider-thumb {
+      
+      background: #00ead1 !important; 
+    }
+  }
+}
+
+//dark-theme
+.dark-theme {
+  background-color: #17062a;
+}
+.dark-theme .app {
+  color: #ffea41;
+  .key {
+    color: #ffea41;
+    background-color: #331b4d;
+    box-shadow: 0 5px 2px #772182;
+  }
+  .equal {
+    color: #17062a;
+    background-color: #00decf;
+    box-shadow: 0px 5px 2px #6ef7ef;
+  }
+  .reset, .del {
+    color: white;
+    background-color: #56077c;
+    box-shadow: 0 5px 2px #be14f3;
+  }
+  header {
+    .slider::-webkit-slider-thumb {
+      background: #00ead1;
+    }
+    .slider {
+      background-color: #1e0836;
+    }
+  }
+  .calc .keyboard {
+    background-color: #1e0836;
+  }
+  .calc .screen {
+    background-color: #1e0836;
+  }
+}
+
+//light-theme
+.light-theme {
+  background-color: #e6e6e6;
+}
+.light-theme .app {
+  color: #36362e;
+  .key {
+    color: #36362e;
+    background-color: #eeeeee;
+    box-shadow: 0 5px 2px #a79e8f;
+  }
+  .equal {
+    color: white;
+    background-color: #c85401;
+    box-shadow: 0px 5px 2px #863901;
+  }
+  .reset, .del {
+    color: white;
+    background-color: #378381;
+    box-shadow: 0 5px 2px #1b616b;
+  }
+  header {
+    .slider::-webkit-slider-thumb {
+      background: #cc5200;
+    }
+    .slider {
+      background-color: #d3cdcd;
+    }
+  }
+  .calc .keyboard {
+    background-color: #d3cdcd;
+  }
+  .calc .screen {
+    background-color: #eeeeee;
+  }
+}
